@@ -4,7 +4,7 @@ import events from "../events";
 
 import { MessageData } from "../interfaces";
 
-const {connection ,  messggesSent ,  sendMessage } = events;
+const {connection ,  messagesSent ,  sendMessage } = events;
 
 class Client {
 	private io:Server;
@@ -17,7 +17,7 @@ class Client {
 	private events(){
 		this.io.on(connection, (client) => {
 			client.on(sendMessage, (data:MessageData) => {
-				this.io.emit(messggesSent,{	data });
+				this.io.emit(messagesSent,{	data });
 			});
 		});
 	}

@@ -5,7 +5,7 @@ import { Server  as SocketSever} from "socket.io";
 import {config} from "dotenv";
 
 import configs from  "../configs/index";
-import Client from "./socker";
+import Client from "./socket";
 const {crossOrigin} =  configs;
 
 config();
